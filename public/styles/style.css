@@ -1,14 +1,13 @@
 body{
-    margin: 0;
+    display: flex;
+    justify-content: center;
 }
 .formulario_de_venda {
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 20px;
+    padding: 5px 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     background-color: #f9f9f9;
-    margin-top: 50px;
+    width: 30%;
   }
   
   .formulario_de_venda h1 {
@@ -51,9 +50,42 @@ body{
     cursor: pointer;
     font-size: 18px;
     transition: background-color 0.3s;
+    margin-bottom: 5px;
   }
   
   .formulario_de_venda button:hover {
     background-color: #0056b3;
   }
-  
+
+  .leitura {
+    display: inline-block;
+    vertical-align: top;
+    width: 60%; /* Ajusta a largura */
+    margin-left: 20px;
+    padding: 15px; /* Aumenta o preenchimento para espaçamento interno */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.leitura h2 {
+    font-size: 20px;
+    color: #333;
+    margin-top: 0;
+}
+
+.leitura table {
+    width: 100%;
+    text-align: center;
+}
+
+.leitura table th,
+.leitura table td {
+    padding: 8px;
+    border-bottom: 1px solid #ccc;
+}
+
+.leitura table th {
+    background-color: #007bff;
+    color: #fff;
+}

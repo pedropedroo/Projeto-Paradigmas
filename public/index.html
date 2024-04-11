@@ -17,7 +17,7 @@
         </div>
         <div>
             <label for="telefone">Telefone:</label>
-            <input type="tel" id="telefone" placeholder="Telefone" required>
+            <input type="number" id="telefone" placeholder="Telefone" required>
         </div>
         <div>
             <label for="produto">Produto:</label>
@@ -38,11 +38,11 @@
         </div>
         <div>
             <label for="desconto">Desconto:</label>
-            <input type="text" id="desconto" placeholder="Desconto">
+            <input type="number" id="desconto" placeholder="Desconto">
         </div>
         <div>
             <label for="valor_final">Valor Final:</label>
-            <input type="text" id="valor_final" readonly>
+            <input type="number" id="valor_final" readonly>
         </div>
         <button type="submit" id="botao">Calcular</button>
         <button type="submit" id="botao_vender">Vender</button>
@@ -51,6 +51,7 @@
         <table id="tabela_vendas">
             <thead>
                 <tr>
+                    <th>Data</th>
                     <th>Nome do Cliente</th>
                     <th>Telefone</th>
                     <th>Produto</th>

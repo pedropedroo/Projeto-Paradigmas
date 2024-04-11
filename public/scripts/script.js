@@ -1,14 +1,12 @@
-let botao = document.querySelector('#botao');
-
-botao.addEventListener('click', () => {
-    let nome = document.querySelector('#nome_cliente').value;
-    let telefone = document.querySelector('#telefone').value;
+let botaoConsulta = document.querySelector('#botao').addEventListener('click', () => {
     let produto = document.querySelector('#produto').value;
     let lente = document.querySelector('#lente').value;
-    let desconto = parseFloat(document.querySelector('#desconto').value);
-    let valorFinal = 0;
+    let desconto = document.querySelector('#desconto').value;
+    let valorFinal = parseFloat(document.querySelector('#valor_final').value);
 
-    if(nome !== "" && telefone !== ""){
+    valorFinal = 0;
+
+    if(produto !== "" && lente !== ""){
         switch (produto) {
             case 'armacao':
                 valorFinal += 50;
@@ -37,7 +35,9 @@ botao.addEventListener('click', () => {
     }
 });
 
-let botao2 = document.querySelector('#botao_vender').addEventListener('click', () => {
+
+
+let botaoVenda = document.querySelector('#botao_vender').addEventListener('click', () => {
     const campos = document.querySelectorAll('#nome_cliente, #telefone, #produto, #lente,#desconto, #valor_final');
     let preenchido = true;
 
@@ -49,6 +49,11 @@ let botao2 = document.querySelector('#botao_vender').addEventListener('click', (
     });
 
     if (preenchido) {
+        let data = new Date();
+        let dia = data.getDay();
+        let mes = data.getMonth();
+        let ano = data.getFullYear();
+        let dataCompleta = dia + '/' + mes + '/' + ano;
         const nome = document.querySelector('#nome_cliente').value;
         const telefone = document.querySelector('#telefone').value;
         const produto = document.querySelector('#produto').value;
@@ -58,6 +63,7 @@ let botao2 = document.querySelector('#botao_vender').addEventListener('click', (
         
         const novaLinha = document.createElement('tr');
         novaLinha.innerHTML = `
+            <td>${dataCompleta}</td>
             <td>${nome}</td>
             <td>${telefone}</td>
             <td>${produto}</td>

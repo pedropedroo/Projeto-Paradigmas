@@ -89,3 +89,10 @@ body{
     background-color: #007bff;
     color: #fff;
 }
+
+.resultadoValor {
+  color: darkgreen;
+  background-color: #ccc;
+  font-style: oblique;
+  font-weight: bold;
+}
